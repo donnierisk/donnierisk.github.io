@@ -37,3 +37,12 @@
   max-width: 420px;
   margin: auto;
 }
+
+/* CUSTOM QWAN CSS */
+h1, h2, h3, input, p, a, div, span, button {
+  color: rgb(187,155,87);
+}
+
+html {
+  background: black;
+}

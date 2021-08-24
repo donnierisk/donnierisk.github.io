@@ -22,88 +22,13 @@
 </head>
 
 <body class="nk-body body-wider bg-light" id="home">
-    <div class="nk-wrap">
-        <!-- <header class="nk-header page-header is-transparent is-sticky is-shrink" id="header"> -->
-            <!-- Header @s -->
-            <div class="header-main">
-                <div class="header-container container">
-                    <div class="header-wrap">
-                        <!-- Logo @s -->
-                        <div class="header-logo logo">
-                            <a href="#home" class="logo-link">
-                                <img class="logo-dark" src="assets/images/artex_token.png" srcset="assets/images/artex_token.png 2x" alt="logo" />
-                                <img class="logo-light" src="images/logo-full-white.png"
-                                    srcset="images/logo-full-white2x.png 2x" alt="logo" />
-                            </a>
-                        </div>
-
-                        <!-- Menu Toogle @s -->
-                        <div class="header-nav-toggle">
-                            <a href="#" class="navbar-toggle" data-menu-toggle="header-menu">
-                                <div class="toggle-line">
-                                    <span></span>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Menu @s -->
-                        <div class="header-navbar">
-                            <nav class="header-menu" id="header-menu">
-                                <ul class="menu">
-                                    <li class="menu-item">
-                                        <a class="menu-link nav-link menu-toggle" href="https://artex.app#home">Home</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link nav-link menu-toggle"
-                                            href="https://artex.app#about">About</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link nav-link menu-toggle"
-                                            href="https://artex.app#tokenomics">Tokenomics</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link nav-link menu-toggle"
-                                            href="https://artex.app#roadmap">Roadmap</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a class="menu-link nav-link menu-toggle" href="https://artex.app#team">Team</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="menu-btns">
-                                    <li>
-                                        <a href="#"
-                                            class="btn btn-rg btn-outline btn-auto no-change btn-primary"><span>BUY
-                                                NOW</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="https://artex.app/whitepaper.pdf"
-                                            class="btn btn-md btn-auto btn-grad no-change"><span>WHITEPAPER</span></a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- .header-navbar @e -->
-                    </div>
-                </div>
-            </div>
-            <!-- .header-main @e -->
-
-            <!-- Banner @s -->
-            <div class="header-banner bg-theme-grad">
-                <div class="nk-ovm shape-a-sm"></div>
-            </div>
-            <!-- .header-banner @e -->
-        <!-- </header> -->
-
+    <div class="nk-wrap" style="background:black">
         <main class="nk-pages">
-            <section class="section pb-0">
                 <div class="container">
                     <div class="nk-block">
                         <div class="row justify-content-center">
                             <div class="col-lg-8 col-mb-10">
-                                <div class="nk-block-text text-center mb-5">
-                                    <h2 class="public-title">Public Sale</h2>
+                                <div class="nk-block-text text-center mb-5 mt-2">
                                     <p>Min: 0.05 ETH - Max: 10 ETH per wallet</p>
                                     <!-- <div class="countdown" id="countdown"></div> -->
                                 </div>
@@ -118,7 +43,7 @@
                                 <div class="field-inline field-inline-s2 bg-white shadow-soft p-0 border">
                                     <div class="field-wrap py-1">
                                         <input class="input-solid required" type="text" name="buy-value"
-                                            placeholder="BNB Amount" id="bnb-input" />
+                                            placeholder="ETH Amount" id="bnb-input" />
                                         <!-- <input type="text" class="d-none" name="form-anti-honeypot" value=""> -->
                                     </div>
 
@@ -138,7 +63,7 @@
                             <div class="col-lg-2">
                                 <div class="text-center">
                                     <div class="icon text-primary">
-                                        <i style="color: #23c99d; font-size: 50px" class="fas fa-exchange-alt"></i>
+                                        <i style="color: rgb(3,218,254); font-size: 50px" class="fas fa-exchange-alt"></i>
                                     </div>
                                 </div>
                             </div>
@@ -164,205 +89,17 @@
                             </div>
                             <div class="col-lg-12 my-5 text-center">
 
-                                <button style="width: 50%;" onclick="buyQwan()" class="btn btn-info">Buy Now<span
-                                        class="badge badge-xs badge-light">%60 OFF</span></button>
+                                <button style="border:0; width: 50%;background:rgb(243,11,214)" onclick="buyQwan()" class="btn btn-info">Buy Now
+                                    <!-- <span class="badge badge-xs badge-light">%60 OFF</span> -->
+                                </button>
                                 <div class="mt-2">1 ETH ~ <span id="getPrice"></span> QWAN</div>
                             </div>
                         </div>
-                        <div class="progress-wrapper mt-4">
-                            <span class="progress-label text-muted">Total Funding</span><span id="progress-percentage"
-                                class="progress-percentage text-muted">%</span>
-                            <div class="progress mt-2" style="height: 10px">
-                                <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow=""
-                                    aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-                            </div>
-                        </div>
-                        <div class="row py-4 my-4">
-                            <div class="col-lg-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <img alt="Image placeholder" src="assets/images/artex_token.png"
-                                        style="width: 90px; height: 90px" />
-                                    <div class="px-4">
-                                        <h5 class="mb-1">
-                                            30M /
-                                            <span id="tokenSold">Connect Wallet</span>
-                                        </h5>
-                                        <p class="mb-0">Total sold Qwan</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <img alt="Image placeholder" src="assets/images/bnb.png"
-                                        style="width: 90px; height: 90px" />
-                                    <div class="px-4">
-                                        <h5 class="mb-1">
-                                            2000 /
-                                            <span id="weiRaised">Connect Wallet</span>
-                                        </h5>
-                                        <p class="mb-0">Amount of ETH Collected</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <img alt="Image placeholder" src="assets/images/locked.png"
-                                        style="width: 90px; height: 90px" />
-                                    <div class="px-4">
-                                        <h5 class="mb-1">1 Billion Qwan</h5>
-                                        <p class="mb-0">Locked Tokens</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <img alt="Image placeholder" src="assets/images/balance.png"
-                                        style="width: 90px; height: 90px" />
-                                    <div class="px-4">
-                                        <h5 class="mb-1">
-                                            <span id="getBalance">Connect Wallet</span>
-                                        </h5>
-                                        <p class="mb-0">Your Balance</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 mb-4">
-                                <div class="d-flex align-items-center">
-                                    <img alt="Image placeholder" src="assets/images/wallet.png"
-                                        style="width: 90px; height: 90px" />
-                                    <div class="px-4">
-                                        <h5 class="mb-1">
-                                            <span id="walletAddress">Connect Wallet</span>
-                                        </h5>
-                                        <p class="mb-0">Your Wallet Address</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-4 pb-4">
-                            <h3 class="text-black-50 text-center">Transaction Hash</h3>
-                            <div id="hash" class="text-center">Your transaction hash will appear here.</div>
-                            <p></p>
-                            <p></p>
-                        </div>
                     </div>
                 </div>
-            </section>
-
             <!-- <button type="button" disabled="" class="btn btn-success mt-5 mb-2 btn-lg">Connect Wallet</button> -->
         </main>
-
-        <footer class="nk-footer bg-theme-alt">
-            <section class="section section-footer section-m bg-transparent tc-light">
-                <div class="container">
-                    <!-- Block @s -->
-                    <div class="nk-block block-footer">
-                        <div class="row justify-content-between gutter-vr-30px">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="wgs wgs-menu">
-                                    <a href="#" class="wgs-logo">
-                                        <img width="100" height="100" src="assets/images/artex_token.png" alt="logo" />
-                                    </a>
-                                    <ul class="social">
-                                        <li>
-                                            <a href="https://twitter.com/artexcommunity"><em
-                                                    class="social-icon fab fa-twitter"></em></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://t.me/artexcommunity"><em
-                                                    class="social-icon fab fa-telegram"></em></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://artexapp.medium.com"><em
-                                                    class="social-icon fab fa-medium-m"></em></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/artexapp"><em
-                                                    class="social-icon fab fa-github"></em></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.reddit.com/user/ArtexApp/"><em
-                                                    class="social-icon fab fa-reddit"></em></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/company/artexapp"><em
-                                                    class="social-icon fab fa-linkedin"></em></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- .col -->
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="wgs wgs-subscribe-form wgs-subscribe-form-s1">
-                                    <h6 class="wgs-title wgs-title-s2 ttc tc-white">Stay up to date on Qwan</h6>
-                                    <div class="wgs-body">
-                                        <form action="form/subscribe.php" class="nk-form-submit" method="post">
-                                            <div class="field-inline field-inline-s4">
-                                                <div class="field-wrap">
-                                                    <input class="input-solid round required email" type="text"
-                                                        name="contact-email" placeholder="Enter your email" />
-                                                    <input type="text" class="d-none" name="form-anti-honeypot"
-                                                        value="" />
-                                                </div>
-                                                <div class="submit-wrap">
-                                                    <button
-                                                        class="btn btn-round btn-md btn-light btn-auto">Subscribe</button>
-                                                </div>
-                                            </div>
-                                            <div class="form-results"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .col -->
-                            <div class="col-lg-4">
-                                <div class="wgs wgs-menu">
-                                    <div class="wgs-body ml-lg-n3">
-                                        <ul class="wgs-links wgs-links-3clumn">
-                                            <li><a href="#about">What is Qwan</a></li>
-                                            <li><a href="#how">How it Works</a></li>
-                                            <li><a href="#artextoken">Why buy Qwan</a></li>
-                                            <li><a href="#presale">Sale Details</a></li>
-                                            <li><a href="#tokenomics">Tokenomics</a></li>
-                                            <li><a href="#roadmap">Roadmap</a></li>
-                                            <li><a href="#team">CoreTeam</a></li>
-                                            <li><a href="#">Whitepaper</a></li>
-                                            <li><a href="#">FAQ</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- .col -->
-                        </div>
-                        <!-- .row -->
-                        <div class="footer-bottom pdt-r">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7">
-                                    <div class="copyright-text copyright-text-s3">
-                                        <p>
-                                            <span class="d-block">Our Contract Address:</span>
-                                            <a href="https://etherscan.io/address/0x6b78E8412e1F048357DD53E2d25337906020934b"
-                                                target="new">0x6b78E8412e1F048357DD53E2d25337906020934b</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 text-lg-right">
-                                    <ul class="footer-links">
-                                        <li>©2021 Qwan</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .row -->
-                    </div>
-                    <!-- .block @e -->
-                </div>
-            </section>
-        </footer>
     </div>
-
-    <div class="preloader"><span class="spinner spinner-round"></span></div>
 
     <!-- JavaScript -->
     <!-- <script src="./ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    -->
